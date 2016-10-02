@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>Note</servlet-name>
+		<servlet-class>de.paulwein.notes.NoteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Note</servlet-name>
+		<url-pattern>/note</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Home</servlet-name>
+		<servlet-class>de.paulwein.notes.HomeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>NotesList</servlet-name>
+		<servlet-class>de.paulwein.notes.NotesListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NotesList</servlet-name>
+		<url-pattern>/noteslist</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>NotesLists</servlet-name>
+		<servlet-class>de.paulwein.notes.NotesListsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NotesLists</servlet-name>
+		<url-pattern>/noteslists</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CreateNote</servlet-name>
+		<servlet-class>de.paulwein.notes.CreateNoteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateNote</servlet-name>
+		<url-pattern>/createnote</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Search</servlet-name>
+		<servlet-class>de.paulwein.notes.SearchServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Search</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Settings</servlet-name>
+		<servlet-class>de.paulwein.notes.SettingsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Settings</servlet-name>
+		<url-pattern>/settings</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>About</servlet-name>
+		<servlet-class>de.paulwein.notes.AboutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>About</servlet-name>
+		<url-pattern>/about</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+ <servlet>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  <init-param>
+   <param-name>services</param-name>
+   <param-value/>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <url-pattern>/_ah/spi/*</url-pattern>
+ </servlet-mapping>
+</web-app>
